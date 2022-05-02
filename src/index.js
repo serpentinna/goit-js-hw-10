@@ -66,20 +66,21 @@ function displayAllCountriesInfo(countries) {
 
     return countries.map(({ flags, name }) => {
       return `<li>
-                  <img src="${flags.svg}" alt="${name}'s flag"></img>
+                  <img src="${flags.svg}" alt="${name} flag"></img>
                   <h2>${name.official}</h2>
-                <li>`;
+                </li>`;
     })
     .join('');
 }
 
+
 function displayOneCountryInfo({ name, capital, languages, population, flags: { svg: flag } }) {
     return `<div>
-            <img src="${flag}" alt="${name}'s flag"></img>
+            <img src="${flag}" alt="${name} flag"></img>
             <h2>${name.official}</h2>
             <p><b>Capital:</b> ${capital}</p>
             <p><b>Population:</b> ${population}</p>
-            <p><b>Languages:</b> ${Object.values(languages).join(', ')}</p>
+            <p><b>Languages:</b> ${languages}</p>
             </div>`;
 }
   
